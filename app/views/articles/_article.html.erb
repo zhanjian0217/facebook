@@ -1,0 +1,20 @@
+<div class="m-6">
+  <div>
+    <h2 class='inline-block'><%= article.user.username %> の貼文</h2>
+    <%= link_to 'Edit', edit_article_path(article) %>
+    <%= link_to 'Delete', article_path(article), method: :delete, data: { confirm: 'R U Sure ?!'} %>
+  </div>
+  <div class='border-4 border-blue-700'>
+    <div>
+      <%= article.user.username %>
+    </div>
+  
+    <div>
+      <%= article.state %>
+    </div>
+  
+    <div>
+      <%= article.content %>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+<%= form_with(model: article) do |f| %>
+  <div>
+    <%= f.label :state, '狀態' %>
+    <%= f.select :state, Article.all_states %>
+  </div>
+
+  <div>
+    <%= f.text_area :content, placeholder: current_user.username + '，在想些什麼？' %>
+  </div>
+
+  <%= f.submit '發佈' %>
+<% end %>

@@ -1,3 +1,12 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+
+body {
+  background-color: #f1f2f5;
+}
+
+
+a {
+  @apply underline text-red-500;
+}
