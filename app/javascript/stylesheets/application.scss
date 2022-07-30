@@ -10,3 +10,9 @@ body {
 a {
   @apply underline text-red-500;
 }
+
+.facebook_icon {
+  font-size: 44px;
+  @apply  text-transparent  bg-clip-text bg-gradient-to-b from-blue-400 to-blue-600;
+
+}

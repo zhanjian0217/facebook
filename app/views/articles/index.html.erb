@@ -1,4 +1,21 @@
-<h1 class="text-blue-900">ARTICLE</h1>
-<%= link_to '新增文章', new_article_path %>
+<div class="flex">
+  <div class='w-5/12 border-8 border-yellow-400'>
+    <div>
+      <%= link_to current_user.username,  profile_path(current_user) if current_user %>
+    </div>
+  </div>
 
-<%= render @articles %>
+  <div class='w-full text-center'>
+    <div class='mx-16 '>
+      <h1 class="text-blue-900">ARTICLE</h1>
+      <%= link_to '新增文章', new_article_path %>
+
+      <%= render @articles %>
+    </div>
+  </div>
+  
+  <div class='w-5/12 border border-red-500'>
+    RIGHT_BAR
+  </div>
+  
+</div>

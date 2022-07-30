@@ -13,6 +13,9 @@ gem 'jbuilder', '~> 2.7'
 gem 'bootsnap', '>= 1.4.4', require: false
 gem 'devise', '~> 4.2'
 gem 'devise-i18n', '~> 1.10', '>= 1.10.2'
+gem 'image_processing', '~> 1.2'
+gem 'streamio-ffmpeg', '~> 3.0', '>= 3.0.2'
+gem 'mini_magick', '~> 4.5', '>= 4.5.1'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

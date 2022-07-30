@@ -4,10 +4,13 @@ require 'rails_helper'
 
 RSpec.describe Article, type: :model do
   describe 'validates' do 
-    let(:article) { create(:article)}
+    let(:article) { create(:article) }
+    let(:user) { create(:user) }
 
-    it 'content 不能是空的' do 
+    it 'content not be nil' do 
+      article = user.articles.create(content:'')
       
+      expect(article).to_not be_valid
     end
 
   end

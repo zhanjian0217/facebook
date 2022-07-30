@@ -4,6 +4,9 @@ class User < ApplicationRecord
 
   # relationship
   has_many :articles
+  has_one_attached :mugshot
+  has_one_attached :banner
+
 
   def admin!
     update(role: 'admin')

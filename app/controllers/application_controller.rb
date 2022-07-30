@@ -1,6 +1,5 @@
 class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
-  before_action :authenticate_user!
 
   def authenticate_admin
     unless current_user.admin?
