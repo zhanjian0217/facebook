@@ -13,5 +13,5 @@ Rails.application.routes.draw do
   end
 
   resources :articles
-  resources :profiles, only: [:show]
+  resources :profiles, only: [:show, :edit, :update]
 end

@@ -1,0 +1,32 @@
+<h1>編輯個人資料</h1>
+
+<%= form_with(model: @user, url: profile_path(@user), method: :patch) do |f| %>
+
+  <div>
+    <%= f.label :introduction, '個人簡介' %>
+    <%= f.text_field :introduction %>
+  </div>
+
+  <div>
+    <%= f.label :job, '工作經歷' %>
+    <%= f.text_field :job %>
+  </div>
+
+  <div>
+    <%= f.label :relationship, '感情生活' %>
+    <%= f.text_field :relationship %>
+  </div>
+
+  <div>
+    <%= f.label :domicile, '居住地' %>
+    <%= f.text_field :domicile %>
+  </div>
+
+  <div>
+    <%= f.label :education, '學歷' %>
+    <%= f.text_field :education %>
+  </div>
+
+  <%= f.submit '送出' %>
+
+<% end %>

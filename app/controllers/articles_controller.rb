@@ -12,22 +12,25 @@ class ArticlesController < ApplicationController
 
   def new
     @article = Article.new
+    session[:return_to] ||= request.referer
   end
 
   def create
     @article = current_user.articles.new(article_params)
     if @article.save
-      redirect_to articles_path, notice: 'ok!!!!'
+      redirect_to session.delete(:return_to), notice: 'ok!!!!'
     else
       render :new
     end
   end
 
-  def edit; end
+  def edit
+    session[:return_to] ||= request.referer
+  end
 
   def update
     if @article.update(article_params)
-      redirect_to articles_path, notice: 'Update Success!!!!'
+      redirect_to session.delete(:return_to), notice: 'Update Success!!!!'
     else
       render :edit
     end

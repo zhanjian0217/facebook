@@ -1,8 +1,17 @@
 <div class="flex">
-  <div class='w-5/12 border-8 border-yellow-400'>
-    <div>
-      <%= link_to current_user.username,  profile_path(current_user) if current_user %>
-    </div>
+  <div class='w-5/12 border-2 border-yellow-400'>
+    <ul>
+      <li class='bg-indigo-700 bg-opacity-50'>
+        <%= link_to profile_path(current_user), class: "inblock" do %>
+          <div class="flex items-center justify-center w-8 h-8 mr-4 overflow-hidden bg-gray-300 rounded-full ">
+            <i class="fa-solid fa-user"></i>
+          </div>
+          <div>
+            <%= current_user.username %></span>
+          </div>
+        <% end %>
+      </li>
+    </ul>
   </div>
 
   <div class='w-full text-center'>
